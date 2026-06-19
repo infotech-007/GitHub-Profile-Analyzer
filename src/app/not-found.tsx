@@ -1,0 +1,1 @@
+import Link from'next/link';import{Card}from'@/components/ui/card';export default function NotFound(){return <main className="container-page py-20"><Card><h1 className="text-3xl font-bold">User not found</h1><p className="mt-2 text-slate-500">Check the GitHub username and try again.</p><Link className="mt-4 inline-block text-indigo-500" href="/">Back home</Link></Card></main>}
