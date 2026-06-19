@@ -1,0 +1,2 @@
+export type ScoreInput={followers:number;repositories:number;stars:number;forks:number;contributions:number};
+export function calculateDeveloperScore(i:ScoreInput){const breakdown={followers:i.followers*3,repositories:i.repositories*2,stars:i.stars*5,forks:i.forks*4,contributions:i.contributions*2};const score=Object.values(breakdown).reduce((a,b)=>a+b,0);const rank=score>=50000?'Elite':score>=15000?'Expert':score>=5000?'Advanced':score>=1000?'Intermediate':'Beginner';const progress=Math.min(100,Math.round(score/500));return{score,rank,progress,breakdown};}
